@@ -1,5 +1,7 @@
 using System.Reflection;
 using BookStoreApi.AppContext;
+using BookStoreApi.Interfaces;
+using BookStoreApi.Services;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 
@@ -20,6 +22,8 @@ namespace BookStoreApi.Extensions
 
             // add validacções para o current assembly
             builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+
+            builder.Services.AddScoped<IBookService, BookService>();
         }
     }
 }
