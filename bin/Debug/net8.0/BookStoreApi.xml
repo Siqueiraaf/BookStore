@@ -4,5 +4,17 @@
         <name>BookStoreApi</name>
     </assembly>
     <members>
+        <member name="T:BookStoreApi.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:BookStoreApi.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:BookStoreApi.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:BookStoreApi.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
     </members>
 </doc>
