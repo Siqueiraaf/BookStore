@@ -1,5 +1,6 @@
 using System.Reflection;
 using BookStoreApi.AppContext;
+using BookStoreApi.Exceptions;
 using BookStoreApi.Interfaces;
 using BookStoreApi.Services;
 using FluentValidation;
@@ -20,10 +21,15 @@ namespace BookStoreApi.Extensions
                 configure.UseSqlServer(builder.Configuration.GetConnectionString("sqlConnection"));
             });
 
-            // add validacções para o current assembly
+            // add validações para o current assembly
             builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
             builder.Services.AddScoped<IBookService, BookService>();
+
+            // Adicionando o manipulador de exceções
+            builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+
+            builder.Services.AddProblemDetails();
         }
     }
 }
