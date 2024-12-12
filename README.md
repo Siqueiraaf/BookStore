@@ -13,12 +13,12 @@ Bem-vindo à API de Livraria, um projeto que explora as APIs mínimas do .NET 8.
     8. Realizamos uma migração
     9. Testamos os endpoints da API
 
-### 🌐 Métodos HTTP em APIs mínimas e baseadas em controladores
+### 🌐 Métodos HTTP em APIs mínimas
 
-    GET: Recuperar dados (todos os livros ou por ID)
-    POST: Adicionar novos livros
-    DELETE: Excluir livros
-    PUT: Atualizar um arquivo
+    app.MapGet: Recuperar dados (todos os livros ou por ID)
+    app.MapPOST: Adicionar novos livros
+    app.MapDELETE: Excluir livros
+    app.MapPUT: Atualizar um arquivo
 
 ### 📂 Arquivos de projeto de API mínima
 
